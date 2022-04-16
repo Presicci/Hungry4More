@@ -53,16 +53,16 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\WaveObject.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\Scripts\EnemyAI.cs" />
-    <Compile Include="Assets\Scripts\LevelObject.cs" />
-    <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\TowerAI.cs" />
-    <Compile Include="Assets\Scripts\TowerButton.cs" />
-    <Compile Include="Assets\Scripts\TowerObject.cs" />
     <Compile Include="Assets\Scripts\BuildNode.cs" />
+    <Compile Include="Assets\Scripts\LevelObject.cs" />
+    <Compile Include="Assets\Scripts\WaveObject.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\TowerObject.cs" />
+    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\TowerButton.cs" />
+    <Compile Include="Assets\Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\TowerAI.cs" />
+    <Compile Include="Assets\Scripts\EnemyPathObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

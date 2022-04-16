@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f954cdd8bd9bcb44b38a531fc33f1a0, type: 3}
+  m_Name: Carrot
+  m_EditorClassIdentifier: 
+  towerObject: {fileID: 5190155882222162843, guid: c0beb85503336bd459f8aa5b2b234f03, type: 3}

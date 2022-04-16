@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField]
-    private Transform[] pathPoints;
+    private EnemyPathObject path;
 
     [SerializeField]
     private float moveSpeed = 1f;
@@ -16,15 +16,14 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         Move();
-        if (health <= 0)
-            Destroy(this);
     }
 
     private void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, pathPoints[pointIndex].transform.position, moveSpeed * Time.deltaTime);
-        if ((transform.position.x == pathPoints[pointIndex].transform.position.x) 
-            && (transform.position.z == pathPoints[pointIndex].transform.position.z) 
+        Transform[] pathPoints = path.GetPathPoints();
+        transform.position = Vector3.MoveTowards(transform.position, pathPoints[pointIndex].position, moveSpeed * Time.deltaTime);
+        if ((transform.position.x == pathPoints[pointIndex].position.x) 
+            && (transform.position.z == pathPoints[pointIndex].position.z) 
             && pointIndex < pathPoints.Length - 1)
         {
             ++pointIndex;
