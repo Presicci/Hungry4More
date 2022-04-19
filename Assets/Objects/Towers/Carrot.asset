@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Carrot
   m_EditorClassIdentifier: 
   towerObject: {fileID: 5190155882222162843, guid: c0beb85503336bd459f8aa5b2b234f03, type: 3}
+  cost: 30

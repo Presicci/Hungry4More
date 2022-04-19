@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BuildNode : MonoBehaviour
@@ -10,7 +8,7 @@ public class BuildNode : MonoBehaviour
     private MeshRenderer renderer;
     private GameObject tower;
 
-    private Vector3 buildOffset = new Vector3(0, 0.3f, 0);
+    private Vector3 buildOffset = new Vector3(0, 0.1f, 0);
 
     void Start()
     {
@@ -26,6 +24,12 @@ public class BuildNode : MonoBehaviour
         TowerObject selectedTower = GameController.instance.GetSelectedTower();
         if (selectedTower == null)
             return;
+        if (!GameController.instance.HasEnoughMoney(selectedTower.GetCost()))
+        {
+            Debug.Log("Not enough money!");
+            return;
+        }
+        GameController.instance.RemoveMoney(selectedTower.GetCost());
         tower = (GameObject)Instantiate(selectedTower.GetTowerAsGameObject(), transform.position + buildOffset, transform.rotation);
     }
 

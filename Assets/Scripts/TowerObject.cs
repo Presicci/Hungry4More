@@ -7,8 +7,16 @@ public class TowerObject : ScriptableObject
     [SerializeField]
     private GameObject towerObject;
 
+    [SerializeField]
+    private int cost;
+
     public GameObject GetTowerAsGameObject()
     {
         return towerObject;
+    }
+
+    public int GetCost()
+    {
+        return cost;
     }
 }

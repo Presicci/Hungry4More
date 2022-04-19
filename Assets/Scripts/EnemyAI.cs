@@ -8,6 +8,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 1f;
 
+    [SerializeField]
+    private Transform cake;
+
     private int health = 100;
 
     private int pointIndex;
@@ -23,11 +26,32 @@ public class EnemyAI : MonoBehaviour
         Transform[] pathPoints = path.GetPathPoints();
         transform.position = Vector3.MoveTowards(transform.position, pathPoints[pointIndex].position, moveSpeed * Time.deltaTime);
         if ((transform.position.x == pathPoints[pointIndex].position.x) 
-            && (transform.position.z == pathPoints[pointIndex].position.z) 
-            && pointIndex < pathPoints.Length - 1)
+            && (transform.position.z == pathPoints[pointIndex].position.z))
         {
-            ++pointIndex;
-            transform.LookAt(pathPoints[pointIndex]);
+            if (pointIndex < pathPoints.Length - 1)
+            {
+                if (pointIndex == 3)
+                    cake.gameObject.SetActive(true);
+                ++pointIndex;
+                transform.LookAt(pathPoints[pointIndex]);
+                return;
+            }
+            if (pointIndex == pathPoints.Length - 1)
+            {
+                GameController.instance.RemoveLife();
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    public void Hit(int damage)
+    {
+        this.health -= damage;
+        if (health <= 0)
+        {
+            GameController.instance.AddMoney(2);    // Temp addMoney amt
+            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

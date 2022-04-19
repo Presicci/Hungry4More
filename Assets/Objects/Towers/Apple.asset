@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: 
   towerObject: {fileID: 658092588743328562, guid: abcc38fa845af184b95c837387b9d7f0, type: 3}
+  cost: 15

@@ -33,6 +33,9 @@ public class TowerAI : MonoBehaviour
             transform.LookAt(target.transform);
             GameObject laser = (GameObject)Instantiate(laserEffect, transform.position, transform.rotation);
             Destroy(laser, 1f);
+            EnemyAI enemy = target.GetComponent<EnemyAI>();
+            if (enemy != null)
+                enemy.Hit(50);
 
         }   
     }

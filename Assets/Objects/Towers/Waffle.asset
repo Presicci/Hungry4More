@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Waffle
   m_EditorClassIdentifier: 
   towerObject: {fileID: 2600383518997728431, guid: e177520433418eb45a634352cca85bdf, type: 3}
+  cost: 150
