@@ -5,16 +5,24 @@ public class TowerAI : MonoBehaviour
     private Transform target;
     public float range = 15f;
     public float attackSpeed = 0.5f;
+    private float timeSinceLastAttack = 0.1f;   // Spawn delay
     public GameObject laserEffect;
 
-    // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        InvokeRepeating("TryAttack", 0f, attackSpeed);
+        TryAttack();
+        if (target == null)
+            return;
+        transform.LookAt(target.transform);
     }
 
     void TryAttack()
     {
+        timeSinceLastAttack -= Time.deltaTime;
+        if (timeSinceLastAttack > 0f)
+        {
+            return;
+        }
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
         GameObject potentialTarget = null;
         float potentialDistance = range + 1;
@@ -34,18 +42,10 @@ public class TowerAI : MonoBehaviour
             GameObject laser = (GameObject)Instantiate(laserEffect, transform.position, transform.rotation);
             Destroy(laser, 1f);
             EnemyAI enemy = target.GetComponent<EnemyAI>();
+            timeSinceLastAttack = attackSpeed;
             if (enemy != null)
                 enemy.Hit(50);
-
         }   
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (target == null)
-            return;
-        transform.LookAt(target.transform);
     }
 
     void OnDrawGizmosSelected()

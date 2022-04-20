@@ -59,12 +59,13 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\TowerObject.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\TowerButtonController.cs" />
     <Compile Include="Assets\Scripts\TowerButton.cs" />
+    <Compile Include="Assets\Scripts\StrobeLight.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\EnemyPathObject.cs" />
     <Compile Include="Assets\Scripts\TowerAI.cs" />
-    <Compile Include="Assets\Scripts\StrobeLight.cs" />
-    <Compile Include="Assets\Scripts\TowerButtonController.cs" />
+    <Compile Include="Assets\PlayButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
