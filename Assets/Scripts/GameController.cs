@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     [Tooltip("TMP element that holds the text for the money display.")]
-    private TextMeshProUGUI moneyDisplay;
+    private TextMeshPro moneyDisplay;
 
     [SerializeField]
     [Tooltip("TMP element that holds the text for the wave display.")]
@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour
 
     private WaveObject[] waves;
     private int currentWave = 1;
-    private Vector3 spawnPosition = new Vector3(5, 0, 0.07f);	// Spawn position for the enemies
+    private Vector3 spawnPosition = new Vector3(5, 0, 0.2f);	// Spawn position for the enemies
 
     private TowerObject selectedTower = null;	// Used for tower placement
 

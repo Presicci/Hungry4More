@@ -110,8 +110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 4498996423957780490, guid: 135686aa898a917488554bf4f4c8c129, type: 3}
-  moveSpeed: 1
   cake: {fileID: 422106548398113629}
+  coin: {fileID: 195951586753125335, guid: 133abb5127b7cb746918bd959b7ffaaa, type: 3}
 --- !u!1001 &422106548398250461
 PrefabInstance:
   m_ObjectHideFlags: 0

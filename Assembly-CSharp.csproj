@@ -68,6 +68,7 @@
     <Compile Include="Assets\PlayButton.cs" />
     <Compile Include="Assets\FastForwardButton.cs" />
     <Compile Include="Assets\PauseButton.cs" />
+    <Compile Include="Assets\Coin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

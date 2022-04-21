@@ -8,6 +8,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private Transform cake;
 
+    [SerializeField]
+    private Transform coin;
+
     private float moveSpeed = 1f;
     private int health = 100;
     private int moneyReward = 2;
@@ -48,7 +51,9 @@ public class EnemyAI : MonoBehaviour
         this.health -= damage;
         if (health <= 0)
         {
-            GameController.instance.AddMoney(moneyReward);    // Temp addMoney amt
+            //GameController.instance.AddMoney(moneyReward);    // Temp addMoney amt
+            Transform coinObj = Instantiate(coin, coin.position, coin.rotation);    // Spawn a coin above the piggy jar
+            coinObj.GetComponent<Coin>().SetMoneyAmount(moneyReward);
             gameObject.SetActive(false);
             Destroy(gameObject);
         }
