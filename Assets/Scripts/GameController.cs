@@ -19,6 +19,10 @@ public class GameController : MonoBehaviour
     private TextMeshProUGUI moneyDisplay;
 
     [SerializeField]
+    [Tooltip("TMP element that holds the text for the wave display.")]
+    private TextMeshProUGUI waveDisplay;
+
+    [SerializeField]
     [Tooltip("Level object to be loaded. If empty, will generate a level dynamically.")]
     private LevelObject loadedLevel;
 
@@ -42,6 +46,7 @@ public class GameController : MonoBehaviour
 
     private int lives;
     private int money;
+    private bool gameRunning = true;
 
     private WaveObject[] waves;
     private int currentWave = 1;
@@ -58,38 +63,68 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        waves = loadedLevel.waves;
-        StartCoroutine(StartSpawning());
+        if (loadedLevel == null)
+        {
+            waves = null;
+        }
+        else
+        {
+            waves = loadedLevel.waves;
+        }
         secondsTillNextWave = secondsBetweenWaves;
-        StartCoroutine(Timer());
         lives = startingLives;
         livesCounter.text = "" + lives;
         money = startingMoney;
         moneyDisplay.text = "$" + money;
+        waveDisplay.text = "Current wave: " + currentWave;
+        StartCoroutine("StartWaves");
         PauseGame();
     }
 
-    IEnumerator StartSpawning()
+    // Called as a coroutine, starts the wave spawning process
+    IEnumerator StartWaves()
     {
-        WaveObject wave = waves[currentWave - 1];
-        for (int index = 0; index < wave.spawns; index++)
+        while(gameRunning)
         {
-            Transform e = Instantiate(enemy, spawnPosition, new Quaternion(0, 90, 0, 90));
-            e.gameObject.SetActive(true);
-            yield return new WaitForSeconds(loadedLevel.timeBetweenSpawns);
-        }
-    }
-
-    IEnumerator Timer()
-    {
-        while(true)
-        {
-            yield return new WaitForSeconds(1);
-            if (--secondsTillNextWave <= 0)
+            int money = ((currentWave / 5) + 2);
+            if (waves != null)
             {
-                secondsTillNextWave = secondsBetweenWaves;
+                WaveObject wave = waves[currentWave - 1];
+                for (int index = 0; index < wave.spawns; index++)
+                {
+                    Transform e = Instantiate(enemy, spawnPosition, new Quaternion(0, 90, 0, 90));
+                    EnemyAI ai = e.GetComponent<EnemyAI>();
+                    ai.SetHealth(wave.health);   // Update enemy hp
+                    ai.SetSpeed(wave.speed);     // Update enemy speed
+                    ai.SetMoneyReward(money);       // Update enemy money
+                    timer.text = "" + ((wave.spawns - index) - 1);
+                    yield return new WaitForSeconds(loadedLevel.timeBetweenSpawns);
+                }
             }
-            timer.text = "" + secondsTillNextWave;
+            else
+            {
+                int spawns = ((currentWave / 5) * 5) + 15;
+                int health = (int)(100 * Mathf.Pow(1.5f, currentWave - 1));
+                float speed = ((currentWave / 10) * 1.1f) + 1;
+                for (int index = 0; index < spawns; index++)
+                {
+                    Transform e = Instantiate(enemy, spawnPosition, new Quaternion(0, 90, 0, 90));
+                    EnemyAI ai = e.GetComponent<EnemyAI>();
+                    ai.SetHealth(health);   // Update enemy hp
+                    ai.SetSpeed(speed);     // Update enemy speed
+                    ai.SetMoneyReward(money);   // Update enemy money
+                    timer.text = "" + ((spawns - index) - 1);
+                    yield return new WaitForSeconds(2f);    // TODO scale this
+                }
+            }
+            while (secondsTillNextWave > 0)
+            {
+                timer.text = "" + secondsTillNextWave;
+                yield return new WaitForSeconds(1);
+                --secondsTillNextWave;
+            }
+            ++currentWave;
+            waveDisplay.text = "Current wave: " + currentWave;
         }
     }
 
@@ -135,6 +170,11 @@ public class GameController : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1;
+    }
+
+    public void FastForwardGame()
+    {
+        Time.timeScale = 3;
     }
 
     public void SelectTower(TowerObject tower)

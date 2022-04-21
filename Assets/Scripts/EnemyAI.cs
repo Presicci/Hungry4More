@@ -6,12 +6,11 @@ public class EnemyAI : MonoBehaviour
     private EnemyPathObject path;
 
     [SerializeField]
-    private float moveSpeed = 1f;
-
-    [SerializeField]
     private Transform cake;
 
+    private float moveSpeed = 1f;
     private int health = 100;
+    private int moneyReward = 2;
 
     private int pointIndex;
 
@@ -49,9 +48,24 @@ public class EnemyAI : MonoBehaviour
         this.health -= damage;
         if (health <= 0)
         {
-            GameController.instance.AddMoney(2);    // Temp addMoney amt
+            GameController.instance.AddMoney(moneyReward);    // Temp addMoney amt
             gameObject.SetActive(false);
             Destroy(gameObject);
         }
+    }
+
+    public void SetHealth(int health)
+    {
+        this.health = health;
+    }
+
+    public void SetSpeed(float speed)
+    {
+        this.moveSpeed = speed;
+    }
+
+    public void SetMoneyReward(int money)
+    {
+        this.moneyReward = money;
     }
 }

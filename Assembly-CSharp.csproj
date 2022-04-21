@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\EnemyPathObject.cs" />
     <Compile Include="Assets\Scripts\TowerAI.cs" />
     <Compile Include="Assets\PlayButton.cs" />
+    <Compile Include="Assets\FastForwardButton.cs" />
+    <Compile Include="Assets\PauseButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
