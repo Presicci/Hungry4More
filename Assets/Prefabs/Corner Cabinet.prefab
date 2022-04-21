@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8480486697266563245}
   - component: {fileID: 4426389332197412517}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cabinet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+  - {fileID: 2100000, guid: 65e3d7b30f6c77a4c809f8efc48136bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,15 +123,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5885310232984489838}
-  - {fileID: 5970858019137207889}
-  - {fileID: 1736360493605042889}
-  - {fileID: 5316506838988789424}
   - {fileID: 2458565142620077828}
   - {fileID: 2458565142430247553}
-  - {fileID: 2458565142417847306}
-  - {fileID: 2458565144084954097}
+  - {fileID: 5970858019137207889}
   - {fileID: 2458565143135861033}
   - {fileID: 2458565144083119435}
+  - {fileID: 5316506838988789424}
+  - {fileID: 1736360493605042889}
+  - {fileID: 2458565142417847306}
+  - {fileID: 2458565144084954097}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 7845609986531866786}
   - component: {fileID: 1593502704322692587}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Knob1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,7 +166,7 @@ Transform:
   m_LocalScale: {x: 0.14, y: 0.04, z: 0.02}
   m_Children: []
   m_Father: {fileID: 3989659250856706329}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2453994368940077150
 MeshFilter:
@@ -195,7 +195,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6cfe423139c361a459da7ed9831d4b1c, type: 2}
+  - {fileID: 2100000, guid: 107021eb32a505f4d80969914a318519, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 2458565142417847300}
   - component: {fileID: 2458565142417847307}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Drawer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +261,7 @@ Transform:
   m_LocalScale: {x: 0.09, y: 0.67, z: 0.4}
   m_Children: []
   m_Father: {fileID: 3989659250856706329}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2458565142417847301
 MeshFilter:
@@ -290,7 +290,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+  - {fileID: 2100000, guid: 65e3d7b30f6c77a4c809f8efc48136bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 2458565142430247555}
   - component: {fileID: 2458565142430247554}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: Cabinet3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,7 +356,7 @@ Transform:
   m_LocalScale: {x: 0.81, y: 0.79, z: 0.8}
   m_Children: []
   m_Father: {fileID: 3989659250856706329}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2458565142430247580
 MeshFilter:
@@ -385,7 +385,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+  - {fileID: 2100000, guid: 65e3d7b30f6c77a4c809f8efc48136bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 2458565142620077830}
   - component: {fileID: 2458565142620077829}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Cabinet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -451,7 +451,7 @@ Transform:
   m_LocalScale: {x: 0.76, y: 0.79, z: 0.79}
   m_Children: []
   m_Father: {fileID: 3989659250856706329}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2458565142620077831
 MeshFilter:
@@ -480,7 +480,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+  - {fileID: 2100000, guid: 65e3d7b30f6c77a4c809f8efc48136bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 2458565143135861035}
   - component: {fileID: 2458565143135861034}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: Countertop2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -546,7 +546,7 @@ Transform:
   m_LocalScale: {x: 0.761, y: 0.08, z: 0.861}
   m_Children: []
   m_Father: {fileID: 3989659250856706329}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2458565143135861028
 MeshFilter:
@@ -575,7 +575,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100010, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+  - {fileID: 2100000, guid: 233b276da3c0412408ad2d9094c90766, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -623,7 +623,7 @@ GameObject:
   - component: {fileID: 2458565144083119429}
   - component: {fileID: 2458565144083119428}
   m_Layer: 0
-  m_Name: Cube (9)
+  m_Name: Countertop3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +641,7 @@ Transform:
   m_LocalScale: {x: 0.761, y: 0.08, z: 0.861}
   m_Children: []
   m_Father: {fileID: 3989659250856706329}
-  m_RootOrder: 9
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &2458565144083119430
 MeshFilter:
@@ -670,7 +670,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100010, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+  - {fileID: 2100000, guid: 233b276da3c0412408ad2d9094c90766, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 2458565144084954099}
   - component: {fileID: 2458565144084954098}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: Knob2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,7 +736,7 @@ Transform:
   m_LocalScale: {x: 0.14, y: 0.04, z: 0.02}
   m_Children: []
   m_Father: {fileID: 3989659250856706329}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &2458565144084953100
 MeshFilter:
@@ -765,7 +765,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6cfe423139c361a459da7ed9831d4b1c, type: 2}
+  - {fileID: 2100000, guid: 107021eb32a505f4d80969914a318519, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -813,7 +813,7 @@ GameObject:
   - component: {fileID: 4974205231061333753}
   - component: {fileID: 7584573560169865114}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Drawer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -831,7 +831,7 @@ Transform:
   m_LocalScale: {x: 0.43, y: 0.67, z: 0.79}
   m_Children: []
   m_Father: {fileID: 3989659250856706329}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2136187033876031982
 MeshFilter:
@@ -860,7 +860,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+  - {fileID: 2100000, guid: 65e3d7b30f6c77a4c809f8efc48136bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 1784194934756435866}
   - component: {fileID: 2437916630847400760}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Countertop1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -926,7 +926,7 @@ Transform:
   m_LocalScale: {x: 0.761, y: 0.08, z: 0.861}
   m_Children: []
   m_Father: {fileID: 3989659250856706329}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8394924603777840511
 MeshFilter:
@@ -955,7 +955,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100010, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+  - {fileID: 2100000, guid: 233b276da3c0412408ad2d9094c90766, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
