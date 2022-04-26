@@ -31,6 +31,10 @@ public class GameController : MonoBehaviour
     private Transform enemy;
 
     [SerializeField]
+    [Tooltip("GameObject of the pause overlay.")]
+    private GameObject pauseOverlay;
+
+    [SerializeField]
     [Tooltip("Seconds of rest time between wave spawns.")]
     private int secondsBetweenWaves;
 
@@ -58,6 +62,14 @@ public class GameController : MonoBehaviour
     {
         if (instance == null)
             instance = this;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseOverlay.SetActive(true);
+        }
     }
 
     // Start is called before the first frame update

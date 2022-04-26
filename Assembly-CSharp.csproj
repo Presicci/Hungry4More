@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\TowerObject.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\menu_Buttons.cs" />
     <Compile Include="Assets\PlayButton.cs" />
     <Compile Include="Assets\Scripts\TowerButtonController.cs" />
     <Compile Include="Assets\Scripts\TowerButton.cs" />
