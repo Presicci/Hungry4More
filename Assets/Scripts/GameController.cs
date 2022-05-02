@@ -2,6 +2,12 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Controls the spawning and time scales for the game.
+/// </summary>
+/// <remarks>
+/// Thomas Presicci - https://github.com/Presicci
+/// </remarks>
 public class GameController : MonoBehaviour
 {
     public static GameController instance;
@@ -102,6 +108,7 @@ public class GameController : MonoBehaviour
             if (waves != null)
             {
                 WaveObject wave = waves[currentWave - 1];
+                secondsTillNextWave = 10;
                 for (int index = 0; index < wave.spawns; index++)
                 {
                     Transform e = Instantiate(enemy, spawnPosition, new Quaternion(0, 90, 0, 90));
@@ -116,8 +123,9 @@ public class GameController : MonoBehaviour
             else
             {
                 int spawns = ((currentWave / 5) * 5) + 15;
-                int health = (int)(100 * Mathf.Pow(1.5f, currentWave - 1));
+                int health = (int)(100 * Mathf.Pow(1.1f, currentWave - 1));
                 float speed = ((currentWave / 10) * 1.1f) + 1;
+                secondsTillNextWave = 10;
                 for (int index = 0; index < spawns; index++)
                 {
                     Transform e = Instantiate(enemy, spawnPosition, new Quaternion(0, 90, 0, 90));

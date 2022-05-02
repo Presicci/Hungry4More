@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Hamburger
   m_EditorClassIdentifier: 
   towerObject: {fileID: 6021424782583761815, guid: 49fe21e098ceadb4d8cbcb211bbaf5f7, type: 3}
-  cost: 250
+  cost: 1000

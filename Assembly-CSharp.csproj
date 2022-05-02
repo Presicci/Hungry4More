@@ -53,23 +53,26 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\PauseButton.cs" />
-    <Compile Include="Assets\Scripts\BuildNode.cs" />
-    <Compile Include="Assets\FastForwardButton.cs" />
-    <Compile Include="Assets\Scripts\LevelObject.cs" />
-    <Compile Include="Assets\Scripts\WaveObject.cs" />
-    <Compile Include="Assets\Coin.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseButton.cs" />
+    <Compile Include="Assets\Scripts\Tower\BuildNode.cs" />
+    <Compile Include="Assets\Scripts\UI\FastForwardButton.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\LevelObject.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\WaveObject.cs" />
+    <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\TowerObject.cs" />
-    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\menu_Buttons.cs" />
-    <Compile Include="Assets\PlayButton.cs" />
-    <Compile Include="Assets\Scripts\TowerButtonController.cs" />
-    <Compile Include="Assets\Scripts\TowerButton.cs" />
-    <Compile Include="Assets\Scripts\StrobeLight.cs" />
-    <Compile Include="Assets\Scripts\EnemyAI.cs" />
-    <Compile Include="Assets\Scripts\EnemyPathObject.cs" />
-    <Compile Include="Assets\Scripts\TowerAI.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\TowerObject.cs" />
+    <Compile Include="Assets\Scripts\Tower\LaserTower.cs" />
+    <Compile Include="Assets\Scripts\UI\menu_Buttons.cs" />
+    <Compile Include="Assets\Scripts\UI\PlayButton.cs" />
+    <Compile Include="Assets\Scripts\UI\TowerButtonController.cs" />
+    <Compile Include="Assets\Scripts\UI\TowerButton.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyPathObject.cs" />
+    <Compile Include="Assets\Scripts\Tower\TowerAI.cs" />
+    <Compile Include="Assets\Scripts\UI\TooltipHandler.cs" />
+    <Compile Include="Assets\Scripts\UI\TooltipRenderer.cs" />
+    <Compile Include="Assets\Scripts\Tower\LightningTower.cs" />
+    <Compile Include="Assets\Scripts\Tower\FlingTower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

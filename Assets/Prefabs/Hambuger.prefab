@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6021424782583797687}
   - component: {fileID: 6021424782582503319}
   - component: {fileID: 6021424782581503319}
-  - component: {fileID: 6021424781480401339}
+  - component: {fileID: -8574529001714247676}
   m_Layer: 0
   m_Name: Hambuger
   m_TagString: Untagged
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6021424781480401339
+--- !u!114 &-8574529001714247676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,9 +91,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6021424782583761815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 423d4ffeaf6c6324d831968b2ab45fab, type: 3}
+  m_Script: {fileID: 11500000, guid: a36208f938ee7a942af9c3158cb3f3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 2
-  attackSpeed: 0.5
-  laserEffect: {fileID: 8272208095361464827, guid: d247d126e4160cb4c8f6d2a5bba3a09b, type: 3}
+  range: 3
+  attackSpeed: 0.1
+  attackEffect: {fileID: 8272208095361464827, guid: 8a2166563b5cbe34bb71914dc900751c, type: 3}
+  damage: 50

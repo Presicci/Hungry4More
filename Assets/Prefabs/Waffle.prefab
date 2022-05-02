@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2600383518997762191}
   - component: {fileID: 2600383518996435119}
   - component: {fileID: 2600383518995468911}
-  - component: {fileID: 2600383518428147793}
+  - component: {fileID: 6418218154384900810}
   m_Layer: 0
   m_Name: Waffle
   m_TagString: Untagged
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2600383518997728431}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.69190717, y: 0.040397316, z: 0.04532373, w: 0.71942925}
   m_LocalPosition: {x: 0, y: 0.202, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 82.7, y: 72, z: 72.4}
 --- !u!33 &2600383518996435119
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2600383518428147793
+--- !u!114 &6418218154384900810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,9 +91,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2600383518997728431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 423d4ffeaf6c6324d831968b2ab45fab, type: 3}
+  m_Script: {fileID: 11500000, guid: a5162012c00eb124993c83d8f4eb7d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 2
+  range: 2.5
   attackSpeed: 0.5
-  laserEffect: {fileID: 8272208095361464827, guid: d247d126e4160cb4c8f6d2a5bba3a09b, type: 3}
+  attackEffect: {fileID: 1344457166417818, guid: 0310b8628b5599c4295215fedba1a232, type: 3}
+  damage: 15
