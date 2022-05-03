@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controls the spawning and time scales for the game.
@@ -37,6 +38,10 @@ public class GameController : MonoBehaviour
     private Transform enemy;
 
     [SerializeField]
+    [Tooltip("Gameobject of the game lost overlay.")]
+    private GameObject gameLostOverlay;
+
+    [SerializeField]
     [Tooltip("GameObject of the pause overlay.")]
     private GameObject pauseOverlay;
 
@@ -56,8 +61,8 @@ public class GameController : MonoBehaviour
 
     private int lives;
     private int money;
-    private bool gameRunning = true;
 
+    private bool gameLost = false;
     private WaveObject[] waves;
     private int currentWave = 1;
     private Vector3 spawnPosition = new Vector3(5, 0, 0.2f);	// Spawn position for the enemies
@@ -102,7 +107,7 @@ public class GameController : MonoBehaviour
     // Called as a coroutine, starts the wave spawning process
     IEnumerator StartWaves()
     {
-        while(gameRunning)
+        while(true)
         {
             int money = ((currentWave / 5) + 2);
             if (waves != null)
@@ -128,7 +133,7 @@ public class GameController : MonoBehaviour
                 secondsTillNextWave = 10;
                 for (int index = 0; index < spawns; index++)
                 {
-                    Transform e = Instantiate(enemy, spawnPosition, new Quaternion(0, 90, 0, 90));
+                    Transform e = Instantiate(enemy, spawnPosition, new Quaternion(0, -90, 0, 90));
                     EnemyAI ai = e.GetComponent<EnemyAI>();
                     ai.SetHealth(health);   // Update enemy hp
                     ai.SetSpeed(speed);     // Update enemy speed
@@ -150,7 +155,9 @@ public class GameController : MonoBehaviour
 
     private void LoseGame()
     {
-        // Lose game
+        gameLost = true;
+        PauseGame();
+        gameLostOverlay.SetActive(true);
     }
 
     public void AddMoney(int amt)
@@ -182,6 +189,11 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public bool IsGameLost()
+    {
+        return gameLost;
+    }
+
     public void PauseGame()
     {
         Time.timeScale = 0;
@@ -205,5 +217,15 @@ public class GameController : MonoBehaviour
     public TowerObject GetSelectedTower()
     {
         return selectedTower;
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

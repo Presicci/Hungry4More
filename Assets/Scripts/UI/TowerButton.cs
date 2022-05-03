@@ -25,6 +25,8 @@ public class TowerButton : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (GameController.instance.IsGameLost())
+            return;
         GameController.instance.SelectTower(tower);
         TowerButtonController.instance.ResetOtherButtons(this);
         image.color = Color.gray;

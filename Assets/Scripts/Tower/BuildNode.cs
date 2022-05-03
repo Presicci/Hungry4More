@@ -14,7 +14,7 @@ public class BuildNode : MonoBehaviour
     private MeshRenderer mRenderer;
     private GameObject tower;
 
-    private Vector3 buildOffset = new Vector3(0, 0.1f, 0);
+    private Vector3 buildOffset = new Vector3(0, 0.2f, 0);
 
     void Start()
     {

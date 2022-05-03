@@ -13,6 +13,8 @@ public class LaserTower : TowerAI
         timeSinceLastAttack -= Time.deltaTime;
         if (target != null)
             transform.LookAt(target.transform);
+        else
+            transform.rotation = Quaternion.identity;
         if (timeSinceLastAttack > 0f)
         {
             return;

@@ -14,6 +14,10 @@ public class FastForwardButton : MonoBehaviour, IPointerClickHandler
     [Tooltip("Pause button reference, used for resetting its color when this button is pressed.")]
     private Transform pauseButton;
 
+    [SerializeField]
+    [Tooltip("Play button reference, used for resetting its color when this button is pressed.")]
+    private Transform playbutton;
+
     private Image image;
     private Color initialColor;
     private Color toggledColor;
@@ -27,6 +31,8 @@ public class FastForwardButton : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (GameController.instance.IsGameLost())
+            return;
         if (Time.timeScale > 1)
         {
             ResetColor();
@@ -37,6 +43,7 @@ public class FastForwardButton : MonoBehaviour, IPointerClickHandler
             image.color = toggledColor;
             GameController.instance.FastForwardGame();
             pauseButton.GetComponent<PauseButton>().ResetColor();
+            playbutton.GetComponent<PlayButton>().ResetColor();
         }
     }
 
